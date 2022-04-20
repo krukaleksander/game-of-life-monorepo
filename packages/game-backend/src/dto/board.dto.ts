@@ -1,4 +1,4 @@
-import { Board } from '../../../game-of-life/src/index';
+import { Board } from '@gameoflife/game-of-life';
 
 export class BordDto {
   board: Board;
