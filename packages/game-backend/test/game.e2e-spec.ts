@@ -27,6 +27,18 @@ describe('AppController (e2e)', () => {
       .send({})
       .expect(400);
   });
+  it('/api/game (POST) response status 400 with no board passed', () => {
+    return request(app.getHttpServer())
+      .post('/game')
+      .send({board: []})
+      .expect({
+        "statusCode": 400,
+        "message": [
+          "board should not be empty"
+        ],
+        "error": "Bad Request"
+      });
+  });
   it('/api/game/tick (POST) response status 400 with id is a number', () => {
     return request(app.getHttpServer())
       .post('/game/tick')
@@ -37,6 +49,20 @@ describe('AppController (e2e)', () => {
         "statusCode": 400,
         "message": [
           "id must be a string"
+        ],
+        "error": "Bad Request"
+      });
+  });
+  it('/api/game/tick (POST) response status 400 with id should not be empty', () => {
+    return request(app.getHttpServer())
+      .post('/game/tick')
+      .send({
+        "id": ""
+      })
+      .expect({
+        "statusCode": 400,
+        "message": [
+          "id should not be empty"
         ],
         "error": "Bad Request"
       });
