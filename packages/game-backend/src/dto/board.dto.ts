@@ -1,5 +1,5 @@
 import { Board } from '@gameoflife/game-of-life';
 
-export class BordDto {
+export class BoradDto {
   board: Board;
 }
