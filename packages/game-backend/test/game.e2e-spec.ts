@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { INestApplication } from '@nestjs/common';
+import {INestApplication, ValidationPipe} from '@nestjs/common';
 import * as request from "supertest";
 import { AppModule } from '../src/app/app.module';
 
@@ -12,6 +12,7 @@ describe('AppController (e2e)', () => {
     }).compile();
 
     app = moduleFixture.createNestApplication();
+    app.useGlobalPipes(new ValidationPipe());
     await app.init();
   });
 
@@ -23,24 +24,7 @@ describe('AppController (e2e)', () => {
   it('/api/game (POST) response status 400 with no board passed', () => {
     return request(app.getHttpServer())
       .post('/game')
-      .send({
-        login: 'somebody',
-        password: 'somepassword',
-      })
+      .send({})
       .expect(400);
-  });
-  it('/api/game/tick (POST) response status 400 with no board passed', () => {
-    return request(app.getHttpServer())
-      .post('/game/tick')
-      .send({
-        id: '',
-      })
-      .expect({
-        "statusCode": 400,
-        "message": [
-          "id must be a string"
-        ],
-        "error": "Bad Request"
-      })
   });
 });
