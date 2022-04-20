@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "game-of-life": "packages/game-of-life"
+  }
+}
