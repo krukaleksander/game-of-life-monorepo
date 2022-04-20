@@ -29,4 +29,18 @@ describe('AppController (e2e)', () => {
       })
       .expect(400);
   });
+  it('/api/game/tick (POST) response status 400 with no board passed', () => {
+    return request(app.getHttpServer())
+      .post('/game/tick')
+      .send({
+        id: '',
+      })
+      .expect({
+        "statusCode": 400,
+        "message": [
+          "id must be a string"
+        ],
+        "error": "Bad Request"
+      })
+  });
 });
