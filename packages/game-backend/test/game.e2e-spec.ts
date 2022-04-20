@@ -15,9 +15,9 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/api (GET)', () => {
+  it('/api (GET) response status 200', () => {
     return request(app.getHttpServer())
-      .get('/api')
-      .expect('Welcome to game-backend!');
+      .get('/')
+      .expect(200)
   });
 });

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'backend',
+  displayName: 'game-backend',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,6 +11,6 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/packages/backend',
+  coverageDirectory: '../../coverage/packages/game-backend',
   testMatch: ['./**/*.e2e-spec.ts']
 };
