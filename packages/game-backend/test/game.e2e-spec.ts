@@ -27,4 +27,18 @@ describe('AppController (e2e)', () => {
       .send({})
       .expect(400);
   });
+  it('/api/game/tick (POST) response status 400 with id is a number', () => {
+    return request(app.getHttpServer())
+      .post('/game/tick')
+      .send({
+        "id": 1
+      })
+      .expect({
+        "statusCode": 400,
+        "message": [
+          "id must be a string"
+        ],
+        "error": "Bad Request"
+      });
+  });
 });
