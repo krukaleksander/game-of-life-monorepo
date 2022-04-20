@@ -1,5 +1,9 @@
-import { Board } from '@gameoflife/game-of-life';
+import {ArrayNotEmpty, IsNotEmpty} from "class-validator";
 
-export class BoradDto {
-  board: Board;
+
+export class BoardDto {
+  @ArrayNotEmpty()
+  board: number[][];
 }
+
+

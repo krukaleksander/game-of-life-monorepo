@@ -3,12 +3,13 @@ import { GameOfLife } from '@gameoflife/game-of-life';
 import { InitialResponseDto } from '../dto/initialResponse.dto';
 import { Board } from '../utils/Board';
 import { TickRequestDto } from '../dto/tickRequest.dto';
-import { BoradDto } from '../dto/board.dto';
+import { BoardDto } from '../dto/board.dto';
 
 @Injectable()
 export class GameService {
   db = new Board();
-  setInitialBoard(board: BoradDto): InitialResponseDto {
+  setInitialBoard(board: BoardDto): InitialResponseDto {
+    console.log(board)
     return { boardId: this.db.init(board.board) };
   }
 

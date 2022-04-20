@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { GameService } from './game.service';
-import { BoradDto } from '../dto/board.dto';
+import { BoardDto } from '../dto/board.dto';
 import { InitialResponseDto } from '../dto/initialResponse.dto';
 import { TickRequestDto } from '../dto/tickRequest.dto';
 
@@ -9,7 +9,7 @@ export class GameController {
   constructor(private readonly gameService: GameService) {}
 
   @Post('/')
-  setInitialBoard(@Body() board: BoradDto): InitialResponseDto {
+  setInitialBoard(@Body() board: BoardDto): InitialResponseDto {
     return this.gameService.setInitialBoard(board);
   }
   @Post('/tick')
