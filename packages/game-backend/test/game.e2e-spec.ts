@@ -20,9 +20,13 @@ describe('AppController (e2e)', () => {
       .get('/')
       .expect(200)
   });
-  it('/api/game (POST) response status 400 with no board', () => {
+  it('/api/game (POST) response status 400 with no board passed', () => {
     return request(app.getHttpServer())
       .post('/game')
-      .expect(400)
+      .send({
+        login: 'somebody',
+        password: 'somepassword',
+      })
+      .expect(400);
   });
 });
