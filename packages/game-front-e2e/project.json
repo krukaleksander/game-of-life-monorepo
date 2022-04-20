@@ -1,17 +1,17 @@
 {
-  "root": "packages/got-front-e2e",
-  "sourceRoot": "packages/got-front-e2e/src",
+  "root": "packages/game-front-e2e",
+  "sourceRoot": "packages/game-front-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "packages/got-front-e2e/cypress.json",
-        "devServerTarget": "got-front:serve"
+        "cypressConfig": "packages/game-front-e2e/cypress.json",
+        "devServerTarget": "game-front:serve"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "got-front:serve:production"
+          "devServerTarget": "game-front:serve:production"
         }
       }
     },
@@ -19,10 +19,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/got-front-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["packages/game-front-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["got-front"]
+  "implicitDependencies": ["game-front"]
 }
