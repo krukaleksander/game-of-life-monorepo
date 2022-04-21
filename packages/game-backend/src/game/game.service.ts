@@ -7,8 +7,9 @@ import { Board } from '../utils/Board';
 export class GameService {
   db = new Board();
 
-  setInitialBoard(board: { board: number[][] }): InitialResponseDto {
-    return { boardId: this.db.init(board.board) };
+  setInitialBoard({board: initialBoard}: { board: number[][] }): InitialResponseDto {
+
+    return { boardId: this.db.init(initialBoard) };
   }
 
   sendBoardAfterTick(id: TickRequestDto) {

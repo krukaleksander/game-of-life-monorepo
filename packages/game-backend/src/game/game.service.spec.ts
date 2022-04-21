@@ -15,9 +15,6 @@ describe('GameService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
-  it(' service should throw Error when id is wrong', function () {
-    expect(() => service.sendBoardAfterTick({id: 'xxx'})).toThrowError('There is no board with this id')
-  });
   it('should give new border an id', function () {
     const newBoard = [
       [0,0,0],
@@ -25,6 +22,9 @@ describe('GameService', () => {
       [0,0,0]
     ];
     expect(service.setInitialBoard({board: newBoard})).toEqual({boardId: expect.any(String)})
+  });
+  it(' service should throw Error when id is wrong', function () {
+    expect(() => service.sendBoardAfterTick({id: 'xxx'})).toThrowError('There is no board with this id')
   });
   it('should send new border after tick', () => {
     const exampleBoard = [
