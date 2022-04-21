@@ -15,4 +15,18 @@ describe('GameService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+  it('should send new border after tick', () => {
+    const exampleBoard = [
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 0, 0],
+    ];
+    const responseBoard = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ];
+    service.setInitialBoard({board: exampleBoard})
+    expect(service.sendBoardAfterTick({id: '0'})).toEqual({status: 200, result: responseBoard})
+  })
 });
