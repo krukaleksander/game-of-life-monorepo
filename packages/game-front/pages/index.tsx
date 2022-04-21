@@ -4,6 +4,7 @@ import { BoardWidget } from '../components/BoardWidget';
 
 const Home: NextPage = () => {
   return (
+
     <Container maxWidth="md">
       <Typography
         variant="h3"
