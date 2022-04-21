@@ -26,6 +26,13 @@ describe('GameService', () => {
   it(' service should throw Error when id is wrong', function () {
     expect(() => service.sendBoardAfterTick({id: 'xxx'})).toThrowError('There is no board with this id')
   });
+  it('should throw error if new board is not square', function () {
+    const newBoard = [
+      [0,0,0],
+      [0,0,0]
+    ];
+    expect(() => service.setInitialBoard({board: newBoard})).toThrowError('Hey! Your board is not square')
+  });
   it('should send new border after tick', () => {
     const exampleBoard = [
       [0, 0, 0],

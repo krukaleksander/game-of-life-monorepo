@@ -8,7 +8,7 @@ export class GameService {
   db = new Board();
 
   setInitialBoard({board: initialBoard}: { board: number[][] }): InitialResponseDto {
-
+    if(initialBoard.length !== initialBoard[0].length) throw new Error('Hey! Your board is not square')
     return { boardId: this.db.init(initialBoard) };
   }
 
