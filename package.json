@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/packages/game-backend/main.js",
-    "build": "npx nx build game-backend"
+    "start:backend": "node dist/packages/game-backend/main.js",
+    "build:backend": "npx nx build game-backend"
   },
   "private": true,
   "dependencies": {
