@@ -3,5 +3,5 @@ import { Board } from './Board';
 
 export class GameDto {
   @ArrayNotEmpty()
-  board: Board;
+  board: Board = [];
 }
