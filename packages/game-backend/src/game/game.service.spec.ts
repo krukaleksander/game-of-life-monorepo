@@ -26,7 +26,7 @@ describe('GameService', () => {
       [0, 0, 0],
       [0, 0, 0],
     ];
-    service.setInitialBoard({board: exampleBoard})
-    expect(service.sendBoardAfterTick({id: '0'})).toEqual({status: 200, result: responseBoard})
+    const {boardId} = service.setInitialBoard({board: exampleBoard})
+    expect(service.sendBoardAfterTick({id: boardId})).toEqual({status: 200, result: responseBoard})
   })
 });
