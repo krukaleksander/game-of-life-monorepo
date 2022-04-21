@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { Board } from '@gameoflife/game-of-life';
+import { Board } from '@gameoflife/game-of-life-dto';
 import { BoardCell } from '../BoardCell';
 
 type BoardGridProps = {

@@ -12,7 +12,7 @@
       "rules": {
         "@next/next/no-html-link-for-pages": [
           "error",
-          "packages/got-front/pages"
+          "packages/game-frontend/pages"
         ]
       }
     },
