@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start:backend": "node dist/packages/game-backend/main.js",
-    "build:backend": "npx nx build game-backend"
+    "start:frontend": "cd dist/packages/game-front && npx next start",
+    "build": "npx nx run-many --target=build --all"
   },
   "private": true,
   "dependencies": {
