@@ -5,6 +5,7 @@ import { BoardWidget } from '../components/BoardWidget';
 const Home: NextPage = () => {
   return (
     <Container maxWidth="md">
+
       <Typography
         variant="h3"
         component="h1"
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       >
         Game of Typescript Life
       </Typography>
+
       <Box sx={{ width: '100%' }}>
         <BoardWidget />
       </Box>
