@@ -1,3 +1,3 @@
 export class InitialResponseDto {
-  boardId: string;
+  boardId: string = '';
 }

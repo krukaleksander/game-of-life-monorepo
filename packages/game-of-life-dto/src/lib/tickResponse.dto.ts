@@ -1,6 +1,6 @@
 import { Board } from './Board';
 
 export class TickResponseDto {
-  status: number;
-  result: Board;
+  status: number = 0;
+  result: Board = [];
 }
