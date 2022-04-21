@@ -2,7 +2,10 @@
   "name": "gameoflife",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve game-backend",
+    "build": "nx build game-backend"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "11.9.0",
