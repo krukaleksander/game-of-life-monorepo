@@ -29,4 +29,7 @@ describe('GameService', () => {
     const {boardId} = service.setInitialBoard({board: exampleBoard})
     expect(service.sendBoardAfterTick({id: boardId})).toEqual({status: 200, result: responseBoard})
   })
+  it(' service should throw Error when id is wrong', function () {
+    expect(() => service.sendBoardAfterTick({id: 'xxx'})).toThrowError('There is no board with this id')
+  });
 });
