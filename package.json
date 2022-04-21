@@ -8,6 +8,7 @@
     "build": "npx nx run-many --target=build --all"
   },
   "private": true,
+
   "dependencies": {
     "nx": "13.10.3",
     "@emotion/react": "11.9.0",
