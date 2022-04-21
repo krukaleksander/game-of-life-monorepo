@@ -4,6 +4,7 @@
     "game-backend": "packages/game-backend",
     "game-front": "packages/game-front",
     "game-front-e2e": "packages/game-front-e2e",
-    "game-of-life": "packages/game-of-life"
+    "game-of-life": "packages/game-of-life",
+    "game-of-life-dto": "packages/game-of-life-dto"
   }
 }
